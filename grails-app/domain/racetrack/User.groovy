@@ -12,7 +12,13 @@ class User {
     	role(inList:["user", "admin"])
     }
 
+    static transients = ['admin']
+
     String toString() {
     	login
+    }
+
+    boolean isAdmin() {
+        return role == "admin"
     }
 }
